@@ -85,9 +85,17 @@ EXPECTED_PAGES.forEach(function (page) {
   let html = read(page);
   let textLength = html.replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim().length;
   check(page + " has substantive content (> 300 chars)", textLength > 300);
-}
+});
 
-);
+// 9. LICENSE and README credit requirements
+check("LICENSE exists", fs.existsSync(path.join(ROOT, "LICENSE")));
+let license = fs.readFileSync(path.join(ROOT, "LICENSE"), "utf8");
+check("LICENSE has exact copyright line", license.includes("Copyright (c) 2026 Asdale Dynamics, LLC"));
+check("README exists", fs.existsSync(path.join(ROOT, "README.md")));
+let readme = fs.readFileSync(path.join(ROOT, "README.md"), "utf8");
+check("README credits Asdale Dynamics, LLC", readme.includes("Asdale Dynamics, LLC"));
+check("README has copyright line", readme.includes("Copyright (c) 2026 Asdale Dynamics, LLC"));
+
 
 if (failures > 0) {
   console.error("\n" + failures + " test(s) failed.");

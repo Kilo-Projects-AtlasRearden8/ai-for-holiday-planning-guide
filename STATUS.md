@@ -41,7 +41,7 @@ Open `site/index.html` in a browser to read the guide. To print a planner, open 
 
 - `npm run build`: built all 9 pages plus style.css
 - `npm run lint`: no syntax errors
-- `npm test`: all 73 checks passed (page existence, style.css, print media query, Asdale Dynamics credit on every page, exact copyright line on every page, no dangling `.md` links, nav present, substantive content on every page, content spot checks)
+- `npm test`: all 80 checks passed (page existence, style.css, print media query, Asdale Dynamics credit on every page, exact copyright line on every page, no dangling `.md` links, nav present, substantive content on every page, content spot checks, LICENSE and README credit/copyright verification)
 - No build errors, no test failures
 
 ## Known gaps
