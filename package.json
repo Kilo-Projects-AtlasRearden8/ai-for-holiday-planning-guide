@@ -1,0 +1,15 @@
+{
+  "name": "ai-for-holiday-planning-guide",
+  "version": "1.0.0",
+  "description": "A beginner manual (Markdown docs + static HTML site) on using AI for the holidays: gift ideas and budgets, travel plans, gathering checklists, meal plans, and post-holiday decluttering. By Dylan Asdale of Asdale Dynamics, LLC.",
+  "license": "MIT",
+  "scripts": {
+    "build": "node build.js",
+    "test": "node tests/build-test.js",
+    "lint": "node -c build.js && node -c tests/build-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "."
+  }
+}
